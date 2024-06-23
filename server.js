@@ -27,14 +27,14 @@ app.post('/usuarios', async (req, res) => {
         }
     })
 
-    
-    res.status(201).json({ menssage: "usuario criado com sucesso!"})
+
+    res.status(201).json({ menssage: "usuario criado com sucesso!" })
 
 })
 
 app.put('/usuarios/:id', async (req, res) => {
 
-    const users = await prisma.user.update ({
+    const users = await prisma.user.update({
         where: {
             id: req.params.id
         },
@@ -46,7 +46,7 @@ app.put('/usuarios/:id', async (req, res) => {
     })
 
 
-    res.status(200).json({ menssage: "usuario Editado com sucesso!"})
+    res.status(200).json({ menssage: "usuario Editado com sucesso!" })
 
 
 })

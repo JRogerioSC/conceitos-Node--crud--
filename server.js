@@ -16,8 +16,6 @@ app.get('/usuarios', async (req, res) => {
 
     res.status(200).json(users)
 
-    res.send("ola,rota acessada com sucesso")
-
 })
 
 app.post('/usuarios', async (req, res) => {
@@ -26,12 +24,12 @@ app.post('/usuarios', async (req, res) => {
         data: {
             email: req.body.email,
             age: req.body.age,
-            name: req.body.name
-        }
+            name: req.body.name,
+        },
     })
 
 
-    res.status(201).json({ menssage: "usuario criado com sucesso!" })
+    res.status(201).json(user)
 
 })
 
@@ -44,12 +42,12 @@ app.put('/usuarios/:id', async (req, res) => {
         data: {
             email: req.body.email,
             age: req.body.age,
-            name: req.body.name
-        }
+            name: req.body.name,
+        },
     })
 
 
-    res.status(200).json({ menssage: "usuario Editado com sucesso!" })
+    res.status(200).json(users)
 
 
 })
@@ -58,7 +56,7 @@ app.delete('/usuarios/:id', async (req, res) => {
     await prisma.user.delete({
         where: {
             id: req.params.id,
-        }
+        },
     })
     res.status(200).json({ menssage: "usuario deletado com sucesso!" })
 })

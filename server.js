@@ -29,7 +29,7 @@ app.post('/usuarios', async (req, res) => {
     })
 
 
-    res.status(201).json(user)
+    res.status(201).json({ menssage: "usuario criado com sucesso!" })
 
 })
 
@@ -47,7 +47,7 @@ app.put('/usuarios/:id', async (req, res) => {
     })
 
 
-    res.status(200).json(users)
+    res.status(200).json({ menssage: "usuario editado com sucesso!" })
 
 
 })

@@ -29,7 +29,7 @@ app.post('/usuarios', async (req, res) => {
     })
 
 
-    res.status(201).json({ menssage: "usuario criado com sucesso!" })
+    res.status(201).json(user)
 
 })
 

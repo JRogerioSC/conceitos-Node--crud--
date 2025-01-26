@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "node server.js",
     "dev": "node --watch server.js"
   },
   "keywords": [],
@@ -11,9 +10,6 @@
   "license": "ISC",
   "description": "",
   "type": "module",
-  "engines": {
-    "node": "18.x"
-  },
   "dependencies": {
     "@prisma/client": "^5.15.0",
     "axios": "^1.7.2",

@@ -10,7 +10,7 @@ const app = express()
 app.use(express.json())
 app.use(cors())
 
-const port = process.env.PORT  || 3000;
+const port = process.env.PORT  || 9001;
 
 app.get('/usuarios', async (req, res) => {
 
@@ -63,4 +63,4 @@ app.delete('/usuarios/:id', async (req, res) => {
     res.status(200).json({ menssage: "usuario deletado com sucesso!" })
 })
 
-app.listen(3000)
+app.listen(9001)

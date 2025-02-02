@@ -8,7 +8,7 @@ const prisma = new PrismaClient()
 
 const app = express()
 app.use(express.json())
-app.use(cors('https://conceitos-node-crud.vercel.app/'));
+app.use(cors('https://cadastrours.netlify.app/'));
 
 const port = process.env.PORT || 3000;
 
